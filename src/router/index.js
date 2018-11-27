@@ -1,9 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import ErosMain from '@/components/ErosMain'
-import Subscription from '@/components/Subscription'
 
-Vue.use(Router)
+const Subscription=resolve=>{
+  require.ensure(['@/components/Subscription'],()=>{
+      resolve(require('@/components/Subscription'));
+  });
+}
+
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -17,4 +22,4 @@ export default new Router({
       component: Subscription
     }
   ]
-})
+});
