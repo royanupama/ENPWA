@@ -1,5 +1,6 @@
 <template>
   <div class="er-main">
+    <router-link to="/subscribe" id="signUp" tag="span">Sign Up</router-link>
     <h1>{{ msg }}</h1>
   </div>
 </template>
@@ -28,7 +29,11 @@
         display: inline-block;
         margin: 0 10px;
     }
-    a {
-        color: #42b983;
+    #signUp{
+        color:#08c;
+        position:absolute;
+        top:1em;
+        right:1em;
+        cursor:pointer;
     }
 </style>
