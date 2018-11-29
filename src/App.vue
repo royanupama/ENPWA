@@ -11,6 +11,10 @@ export default {
 }
 </script>
 
+<style lang="scss">
+@import './scss/custom-bootstrap.scss';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+</style>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -19,5 +23,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+#app h1{
+  font-size:2em;
+  margin-top:1em;
 }
 </style>
