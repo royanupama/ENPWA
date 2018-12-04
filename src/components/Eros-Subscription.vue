@@ -17,7 +17,7 @@
           <button class="btn btn-success" @click="fetchUserData">Get User Data</button>
           <br/><br/>
           <ul class="list-group">
-            <li class="list-group-item" :key="u" v-for="u in users">{{u.username}} - {{u.email}}</li>
+           <li class="list-group-item" :key="u.email" v-for="u in users">{{u.username}} - {{u.email}}</li>
           </ul>
         </div>
         </div>
@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'Subscription',
+  name: 'Eros-Subscription',
   data () {
     return {
       msg: "Come be entertained. Subscribe Now.",
@@ -41,7 +41,7 @@ export default {
   },
   methods:{
     submitUserData(){
-      this.$http.post('https://dummyserver-1610c.firebaseio.com/userData.json',this.user)
+      this.$http.post('',this.user)
         .then(
           response=>{
             console.log(response);
@@ -51,7 +51,7 @@ export default {
           }
         );
     },fetchUserData(){
-      this.$http.get('https://dummyserver-1610c.firebaseio.com/userData.json')
+      this.$http.get('')
         .then(
           response=>{
             return response.json();

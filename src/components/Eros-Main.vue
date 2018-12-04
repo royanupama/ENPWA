@@ -7,7 +7,7 @@
 
 <script>
     export default {
-        name: 'ErosMain',
+        name: 'Eros-Main',
         data () {
             return {
                 msg: "Bollywood's biggest movie collection."

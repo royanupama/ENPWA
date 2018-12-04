@@ -1,19 +1,19 @@
-import ErosMain from '@/components/ErosMain'
+import ErosMain from '@/components/Eros-Main'
 
 const Subscription=resolve=>{
-  require.ensure(['@/components/Subscription'],()=>{
-    resolve(require('@/components/Subscription'));
+  require.ensure(['@/components/Eros-Subscription'],()=>{
+    resolve(require('@/components/Eros-Subscription'));
   });
 };
 
 export const routes= [
     {
       path: '/',
-      name: 'ErosMain',
-      component: ErosMain
+      name: 'Eros-Main',
+      component: Eros-Main
     },{
       path: '/subscribe',
-      name: 'Subscription',
-      component: Subscription
+      name: 'Eros-Subscription',
+      component: Eros-Subscription
     }
   ];
